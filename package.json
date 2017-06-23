@@ -6,7 +6,7 @@
     "create-react-app": "tasks/cra.sh",
     "e2e": "tasks/e2e-simple.sh",
     "postinstall": "lerna bootstrap && cd packages/react-error-overlay/ && npm run build:prod",
-    "publish": "tasks/release.sh",
+    "publish": "tasks/release.sh --skip-npm",
     "start": "node packages/react-scripts/scripts/start.js",
     "test": "node packages/react-scripts/scripts/test.js --env=jsdom",
     "format": "prettier --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",

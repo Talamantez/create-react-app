@@ -1,0 +1,8 @@
+{
+  "files": [
+    {
+      "pattern": "packages/react-scripts/react-scripts*.tgz",
+      "target": "npm-local/@tcc/react-scripts/-/@tcc/"
+    }
+  ]
+}

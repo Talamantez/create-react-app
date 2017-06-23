@@ -1,0 +1,9 @@
+containers:
+  - 747953286079.dkr.ecr.us-east-1.amazonaws.com/web/webkins-nvm:artifactory
+
+script:
+  - "source ~/.profile"
+  - "pushd ./packages/react-scripts"
+  - "yarn"
+  - "popd"
+  - "./scripts/npm_packer.sh react-scripts ./packages/react-scripts"
