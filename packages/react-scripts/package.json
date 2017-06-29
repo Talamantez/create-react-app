@@ -10,13 +10,7 @@
   "bugs": {
     "url": "https://github.com/facebookincubator/create-react-app/issues"
   },
-  "files": [
-    "bin",
-    "config",
-    "scripts",
-    "template",
-    "utils"
-  ],
+  "files": ["bin", "config", "scripts", "template", "utils"],
   "bin": {
     "react-scripts": "./bin/react-scripts.js"
   },
@@ -43,6 +37,7 @@
     "file-loader": "0.11.1",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.28.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "20.0.3",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.0.0",
