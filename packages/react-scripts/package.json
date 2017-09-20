@@ -2,7 +2,10 @@
   "name": "@tcc/react-scripts",
   "version": "1.0.14-1",
   "description": "Configuration and scripts for Create React App.",
-  "repository": "facebookincubator/create-react-app",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.tcc.li:7999/es/create-react-app.git"
+  },
   "license": "BSD-3-Clause",
   "engines": {
     "node": ">=6"
