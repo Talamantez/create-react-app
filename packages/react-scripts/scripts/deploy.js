@@ -17,9 +17,12 @@ const status = require('node-status');
 const paths = require('../config/paths');
 const appPkg = require(paths.appPackageJson);
 
-const SF_LOGIN_URL = 'SF_LOGIN_URL';
-const SF_USERNAME = 'SF_USERNAME';
-const SF_PASSWORD = 'SF_PASSWORD';
+const destinationEnv = process.env.DEST_ENV
+  ? '_' + process.env.DEST_ENV.toUpperCase()
+  : '';
+const SF_LOGIN_URL = 'SF_LOGIN_URL' + destinationEnv;
+const SF_USERNAME = 'SF_USERNAME' + destinationEnv;
+const SF_PASSWORD = 'SF_PASSWORD' + destinationEnv;
 
 const apiVersion = process.env.SF_API_VERSION;
 
