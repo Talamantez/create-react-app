@@ -17,8 +17,8 @@ const status = require('node-status');
 const paths = require('../config/paths');
 const appPkg = require(paths.appPackageJson);
 
-const destinationEnv = process.env.DEST_ENV
-  ? '_' + process.env.DEST_ENV.toUpperCase()
+const destinationEnv = process.env.SF_ENV
+  ? '_' + process.env.SF_ENV.toUpperCase()
   : '';
 const SF_LOGIN_URL = 'SF_LOGIN_URL' + destinationEnv;
 const SF_USERNAME = 'SF_USERNAME' + destinationEnv;
