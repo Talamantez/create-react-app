@@ -53,14 +53,6 @@ module.exports = (resolve, rootDir, isEjecting) => {
       'node',
     ],
   };
-  if (process.env.ENABLE_CSS_MODULES) {
-    config.moduleNameMapper['^.+\\.css$'] = 'identity-obj-proxy';
-    delete config.transform['^.+\\.css$'];
-    delete config.transform['^(?!.*\\.(js|jsx|css|json)$)'];
-    config.transform['^(?!.*\\.(js|jsx|json)$)'] = resolve(
-      'config/jest/fileTransform.js'
-    );
-  }
   if (rootDir) {
     config.rootDir = rootDir;
   }
