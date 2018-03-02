@@ -8,6 +8,16 @@ Create React apps with no build configuration.
 Create React App works on macOS, Windows, and Linux.<br>
 If something doesn’t work, please [file an issue](https://github.com/facebookincubator/create-react-app/issues/new).
 
+## Deployment Steps
+```sh
+run `npm run publish -- --skip-npm` (do not use yarn)
+make sure it only prompts you for the version of `@tcc/react-scripts`
+choose "Prerelease" in the prompt
+then `git push && git push --tags`
+```
+Note: The publish trigger has been janky if publish does
+automatically kick off then manually fire it.
+
 ## Quick Overview
 
 ```sh
