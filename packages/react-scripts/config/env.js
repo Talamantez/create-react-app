@@ -12,6 +12,7 @@ const _ = require('lodash');
 const fs = require('fs');
 const path = require('path');
 const paths = require('./paths');
+const spawn = require('react-dev-utils/crossSpawn');
 
 // Make sure that including paths.js after env.js will read .env variables.
 delete require.cache[require.resolve('./paths')];
@@ -86,6 +87,12 @@ if (!process.env.REACT_APP_SF_PAGE) {
 if (!process.env.REACT_APP_SF_STATIC_RESOURCE) {
   process.env.REACT_APP_SF_STATIC_RESOURCE = sfPrefix;
 }
+
+// Build metadata
+process.env.REACT_APP_COMMIT_HASH = spawn
+  .sync('git', ['rev-parse', '--short', 'HEAD'], {})
+  .stdout.toString()
+  .trim();
 
 // Grab NODE_ENV and REACT_APP_* environment variables and prepare them to be
 // injected into the application via DefinePlugin in Webpack configuration.
