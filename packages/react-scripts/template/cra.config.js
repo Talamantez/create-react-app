@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-  // plugin definitions
+  // plugin definitions (optional)
   plugins: [],
-  // webpack config
+  // webpack config (optional)
   apply: (config, options) => {
     return config;
   },
