@@ -96,7 +96,11 @@ const bundle = () => {
     archive.on('end', () => resolve(output));
     archive.on('error', reject);
     archive.pipe(output);
-    return glob('**', { cwd: paths.appBuild, nodir: true })
+    return glob('**', {
+      cwd: paths.appBuild,
+      nodir: true,
+      ignore: process.env.DEPLOY_SOURCEMAP !== 'false' ? undefined : '**/*.map',
+    })
       .then(files => {
         return Promise.all(
           files.map(name => {
