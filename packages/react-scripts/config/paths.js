@@ -31,9 +31,7 @@ function ensureSlash(path, needsSlash) {
 }
 
 const getPublicUrl = appPackageJson =>
-  envPublicUrl ||
-  require(appPackageJson).homepage ||
-  `/resource/${process.env.REACT_APP_SF_STATIC_RESOURCE}`;
+  envPublicUrl || require(appPackageJson).homepage;
 
 // We use `PUBLIC_URL` environment variable or "homepage" field to infer
 // "public path" at which the app is served.
