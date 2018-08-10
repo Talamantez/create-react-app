@@ -1,4 +1,4 @@
-# react-scripts
+# @jdcrensh/react-scripts
 
 This package includes scripts and configuration used by [Create React App](https://github.com/jdcrensh/create-react-app/tree/jdcrensh).<br>
 Please refer to its documentation:
